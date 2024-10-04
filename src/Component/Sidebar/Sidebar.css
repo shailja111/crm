@@ -1,0 +1,95 @@
+.sidebar {
+    width: 250px;
+    background-color: #17181a;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    color: white;
+    list-style-type: none;
+    overflow: hidden; /* Hide scrollbar */
+    transform: translateX(-100%); /* Initially hide */
+}
+
+/* Prevent scrollbar when dropdown is open */
+.sidebar.open {
+    transform: translateX(0); /* Show when open */
+}
+
+/* Sidebar Item */
+.sidebar-item {
+    
+    /* padding: .75em 1em; */
+    display: block;
+    transition: background-color 0.15s, color 0.15s; 
+    border-radius: 5px;
+    padding-top: 31px;
+}
+
+.sidebar-item:hover {
+    background-color: rgba(255, 255, 255, .1);
+    color: #ffffff;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+
+.sidebar-title {
+    display: flex;
+    font-size: 1.2em;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    padding-top: 18px;
+}
+
+.sidebar-title .toggle-btn {
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.sidebar-item.open > .sidebar-title .toggle-btn {
+    transform: rotate(180deg); /* Rotate icon when open */
+}
+
+.sidebar-content {
+    max-height: 0; /* Start with max-height of 0 for collapsing */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 0.3s ease; /* Smooth transition */
+}
+
+.sidebar-item.open > .sidebar-content {
+    max-height: 1000px; /* Set a large value when expanded */
+}
+
+/* Plain Links */
+.sidebar-item.plain {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar-item.plain:hover {
+    text-decoration: none;
+}
+.title-content {
+    display: flex; /* Use flexbox for title and icon */
+    align-items: center; /* Centers the icon and title vertically */
+}
+
+.icon {
+    margin-right: 0.5em; /* Adds space between icon and title */
+}
+
+.toggle-btn {
+    transition: transform 0.3s; /* Smooth rotation */
+    color: white; /* Set color to match theme */
+    padding:1rem
+}
+
+.toggle-btn.open {
+    transform: rotate(180deg); /* Rotate icon when open */
+    padding:1rem
+}

@@ -1,0 +1,103 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1 rem;
+    height: 60px;
+    background-color: #ffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top:0
+   
+}
+.main-container {
+  display: flex;
+}
+
+.content {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.content.shifted {
+  margin-left: 250px; /* Push content when sidebar is open */
+}
+
+.left-navbar{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+.left-navbar li a {
+    color: #A9A9A9; /* Light gray color for the icons */
+    font-size: 1rem; /* Adjust icon size */
+    text-decoration: none;
+  }
+
+.search-container {
+    position: relative; /* Parent element to contain input and icon */
+}
+
+.left-navbar input {
+    border: 0.5px solid rgba(133, 129, 128, 0.2); /* Light border with 20% opacity */
+    border-radius: 5px;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    font-size: 0.85rem; /* Smaller font size */
+    font-weight: normal; /* Lighter text */
+    color: #999; /* Light gray text */
+    width: 100%;
+}
+.search-icon {
+    position: absolute;
+    right: 0px; /* Position icon to the right inside the input */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center icon */
+    color: #999; /* Light gray color for icon */
+}
+
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.right-navbar{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style-type: none;
+    padding-right: 10px;
+    cursor: pointer;
+    
+}
+
+.right-navbar li a {
+    color: #A9A9A9; /* Light gray color for the icons */
+    font-size: 1rem; /* Adjust icon size */
+    text-decoration: none;
+  }
+  .right-navbar li a:hover {
+    color: #808080; /* Slightly darker gray when hovering over icons */
+  }
+  
+  .right-navbar li a svg {
+    vertical-align: middle; /* Aligns icons vertically in the middle */
+  }
+  .right-navbar li {
+    display: flex;
+    align-items: center;
+  }
+
+.link{
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.link:hover{
+    color: #ff6347;}
+
